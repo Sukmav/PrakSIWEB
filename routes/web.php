@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 
 // Home Routes
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -14,3 +15,6 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Registration Routes
 Route::post('/register-patient', [HomeController::class, 'storeRegistration'])->name('register-patient');
+
+// Product Routes
+Route::get('/products', [ProductController::class, 'index'])->name('products');
